@@ -11,14 +11,17 @@ public class WordSort {
 		int N = sc.nextInt();
 		
 		if(N>=1 && N<=20000) {
+			//단어 중복을 위해 HashSet으로 저장
 			HashSet<String> hashWords = new HashSet<>();
 			for(int i=0; i<N; i++) {
 				hashWords.add(sc.next());
 			}
+			//HashSet 크기 만큼 배열 생성 
 			String[] words = new String[hashWords.size()];
 			hashWords.toArray(words);
 			sc.close();
 			
+			//lambda식 이용하여 길이 비교
 			Arrays.sort(words, (s1, s2)-> {
 				return Integer.compare(s1.length(), s2.length());
 			});
