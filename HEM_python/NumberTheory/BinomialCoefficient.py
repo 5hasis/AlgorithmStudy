@@ -1,3 +1,4 @@
+#이항계수
 import math
 
 n,k = map(int,input().split())
