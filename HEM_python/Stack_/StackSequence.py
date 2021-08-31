@@ -38,6 +38,7 @@ while(True):
     
     
 if seq == res:
+    #print(*arr, sep="\n") #한줄씩 출력(unpacking)
     for i in range(len(arr)):
         print(arr[i])
 else:
